@@ -1,7 +1,7 @@
 "Nothing is as permanent as a temporary solution that works."
 "There are 2 types of people. Those who do backups and those who will do backups."
 "Give a man a program, and he'll be frustrated for a day. Teach a man to program, and he'll be frustrated for a lifetime."
-"Boss makes a dollar, while I make a dime, that's why I nap on company time."
+"Boss makes a dollar, while I make a dime, that's why I nap on company time (I promise this is a joke)."
 "How did this website take me 6+ hours to make? I should have become a doctor."
 "Can you tell that I like Mondrian art?"
 "Chances are you'll see the exact same quote back-to-back; oh the joys of pseudo-randomness."
@@ -9,3 +9,4 @@
 "Seven sizzling sausages sizzling in a saucepan."
 "DJ! DJ look I made a website!"
 "Why spend hours doing something I can spend weeks automating?"
+"Instead of refreshing the page you can just go look at the quotes.txt file on GitHub, if your're boring."
