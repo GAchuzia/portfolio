@@ -1,22 +1,24 @@
-const container = document.getElementById('container');
-const toggleBtn = document.getElementById('theme-toggle');
+(async () => {
+  const quoteElement = document.getElementById('quote')
+  try{
+    const resource = await fetch('quotes.txt');
+    if(!resource.ok) throw new Error(`HTTP ${resource.status}`);
+    const text = await resource.text();
 
-const themes = ['dark', 'light'];
-let currentTheme = 0;
+    const lunes = text
+    .split('\n')
+    .map(l => l.trim())
+    .filter(l => l.length > 0)
 
-function updateTheme() {
+    if (lines.length === 0){
+      quoteElement.textContent = 'No quotes found, darn.';
+      return;
+    }
 
-  document.body.classList.remove(...themes);
-
-  const theme = themes[currentTheme];
-  document.body.classList.add(theme);
-  currentTheme = (currentTheme + 1) % themes.length;
-}
-
-function updateButtonName(){
-  
-}
-
-toggleBtn.addEventListener('click', updateTheme);
-
-updateTheme();
+    const randomIndex = Math.floor(Math.random() * lines.length);
+    quoteElement.textContent = lines[randomIndex];
+  } catch (err){
+    console.error('Failed to load quotes:', err);
+    quoteElement.textContent = 'Could not load quotes, darn.';
+  }
+})
