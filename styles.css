@@ -61,7 +61,7 @@ body {
   max-width: 400px;
   width: 100%;
   height: 130px;  
-  border: 2px solid #111;
+  border: 2.5px solid #111;
   border-radius: 8px;
   box-shadow: 5px 5px 5px grey;
   object-fit: cover;  
@@ -71,13 +71,13 @@ body {
   font-size: 1rem;
   margin-bottom: 1px;
   margin-left: 4px;
-  font-weight: bold;
+  text-shadow: 1px 1px grey;
 }
 
 .title {
   font-size: 2.9rem;
   margin-top: -16px;
-  text-shadow: 2px 2px white;
+  text-shadow: 2px 1px white;
 }
 
 .theme-switch {
