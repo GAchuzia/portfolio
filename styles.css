@@ -32,8 +32,10 @@ body {
 }
 
 .header-container {
-  display: flex;
+  flex-direction: column;
   align-items: center;
+  justify-content: center;
+  display: flex;
   gap: 12px;
   width: 100%;
   max-width: 900px;
@@ -41,78 +43,34 @@ body {
 
 .header {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   align-items: center;
   background: #f4bf1a;
   border: 2px solid #111;
   border-radius: 10px;
   padding: 16px 24px;
-  max-width: 900px;
   width: 100%;
-  margin-bottom: 0px;
+  max-width: 900px;
   box-shadow: 5px 5px 5px grey;
 }
 
 .header-text {
-  flex: 1;
-}
-
-.header-img {
-  flex: 0 0 auto;       
-  max-width: 400px;
   width: 100%;
-  height: 130px;  
-  border: 2.5px solid #111;
-  border-radius: 8px;
-  box-shadow: 5px 5px 5px grey;
-  object-fit: cover;  
+  text-align: center;
 }
 
 .subtitle {
   font-size: 1rem;
-  margin-bottom: 1px;
-  margin-left: 4px;
   text-shadow: 1px 1px grey;
 }
 
 .title {
   font-size: 2.9rem;
-  margin-top: -16px;
+  margin-top: -15px;
   text-shadow: 2px 1px white;
 }
 
-.theme-switch {
-  display: grid;
-  grid-template-columns: auto auto;
-  border: 2px solid #111;
-  width: 80px;
-  height: 80px;
-  border-radius: 2px;
-  margin-left: 16px;
-}
-
-.red-theme {
-  background: #d01818;
-  padding: 16px;
-  border: 1px solid #111;
-}
-
-.blue-theme {
-  background:  #83c5f3;
-  padding: 16px;
-  border: 1px solid #111;
-}
-
-.yellow-theme {
-  background: #f4bf1a;
-  padding: 16px;
-  border: 1px solid #111;
-}
-
-.white-theme {
-  background: #ffffff;
-  padding: 16px;
-  border: 1px solid #111;
-}
 
 .main {
   display: flex;
@@ -133,7 +91,7 @@ body {
   background: #d01818;
   color: #ffffff;
   flex: 1 1 700px;
-  text-shadow: 1px 1px black;
+  text-shadow: 2px 1px black;
 }
 
 .projects h2, .resume h2, .about h2 {
@@ -188,8 +146,8 @@ body {
   background: #3755a1;
   color: #fff;
   margin-bottom: 6px;
-  flex: 1 1 450px; 
-  text-shadow: 1px 1px black;
+  flex: 1 1 350px; 
+  text-shadow: 2px 1px black;
 }
 
 .book {
@@ -229,7 +187,7 @@ body {
 .email {
   background: #d01818;
   color: #fff;
-  text-shadow: 1px 1px black;
+  text-shadow: 2px 1px black;
 }
 
 .quote {
@@ -244,4 +202,76 @@ body {
   box-shadow: 5px 5px 5px grey;
   color: #fff;
   text-shadow: 1px 1px black;
+}
+
+@media (max-width: 768px) {
+   body {
+    align-items: flex-start;
+    padding-top: 12px;
+    padding-bottom: 12px;
+  }
+  .container {
+    gap: 12px;
+    padding: 0 12px;
+  }
+  .header-container {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 8px;
+  }
+  .header {
+    padding: 12px 16px;
+  }
+  .header-text {
+    text-align: center;
+  }
+  .header-img {
+    flex: none;
+    width: 100%;
+    max-width: none;
+    height: auto;
+    margin: 0;
+  }
+  .main {
+    flex-direction: column;
+    gap: 12px;
+  }
+  .box {
+    flex: none !important;
+    width: 100%;
+    padding: 12px;
+  }
+  .right-column {
+    flex: none;
+    width: 100%;
+    gap: 12px;
+  }
+  .buttons {
+    gap: 8px;
+  }
+  .btn {
+    width: 100%;
+    font-size: 1.25rem;
+    padding: 12px;
+  }
+  .title {
+    font-size: 2rem;
+  }
+  .subtitle {
+    font-size: 0.875rem;
+  }
+  .projects h2,
+  .resume h2,
+  .about h2 {
+    font-size: 1.75rem;
+  }
+  .projects li,
+  .resume p,
+  .about p,
+  .quote {
+    font-size: 1rem;
+  }
+  .quote {
+    margin-bottom: 12px;
+  }
 }
