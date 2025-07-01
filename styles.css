@@ -154,7 +154,7 @@ body {
 }
 
 .about {
-  background: #83c5f3;
+  background: #3755a1;
   color: #111;
   margin-bottom: 6px;
   flex: 1; 
@@ -201,7 +201,7 @@ body {
 .quote {
   max-width: 900px;
   width: 100%;
-  background: #83c5f3;
+  background: #3755a1;
   border: 2px solid #111;
   border-radius: 8px;
   padding: 16px;
