@@ -1,30 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>GAchuzia's Portfolio</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-    <div class="content-wrapper dark">
-      <div id="container">
-        <div id="title-section">
-          <p id="subtitle">Grant Achuzia's</p>
-          <p id="title">Portfolio</p>
-        </div>
-  
-        <div id="contact-links">
-          <a href="https://github.com/GAchuzia" target="_blank" class="contact-icon">GitHub</a>
-          <a href="https://www.linkedin.com/in/grant-achuzia-8259251b8/" target="_blank" class="contact-icon">LinkedIn</a>
-          <a href="mailto:achuziaduby@gmail.com" class="contact-icon">Email</a>
+  <div class="container">
+    <header class="header">
+      <div class="header-text">
+        <div class="subtitle">Grant Achuzia's</div>
+        <div class="title">PORTFOLIO</div>
+      </div>
+    </header>
+
+    <main class="main">
+      <section class="box projects">
+        <h2>PROJECTS</h2>
+        <ul>
+          <li><a href="https://github.com/GAchuzia/trpl-m"><strong>trpl-m: </strong>Zetamac meets MonkeyType</a></li>
+          <li><a href="https://github.com/GAchuzia/stijl-gen"><strong>stijl-gen:</strong> Psuedo-random abstract art generator</a></li>
+          <li><a href="https://github.com/GAchuzia/squaretangle"><strong>squaretangle:</strong> Custom bento box inspired startpages</a></li>
+          <li><a href="https://github.com/GAchuzia/kortleck"><strong>kortleck:</strong> Your favorite deck-of-cards games in one place</a></li>
+          <li><em>Can't access a project? Come back later!</em></li>
+        </ul>
+      </section>
+
+      <section class="box resume">
+        <h2>RESUME</h2>
+        <p><strong>Lumentum:</strong> Solution Software System Test Intern</p>
+        <p><strong>Maintenance Drone Co:</strong> Software Developer Intern</p>
+        <p><strong>Languages:</strong> Python, JavaScript, TypeScript, C, C++, SQL</p>
+        <p><strong>Technologies:</strong> Git, Bash, Docker, React, Flask</p>
+        <p class="resume-link"><a href="assets\Resume_Grant Achuzia.pdf" target="_blank">Actual Resume</a></p>
+      </section>
+
+      <div class="right-column">
+        <section class="box about">
+          <h2>ABOUT</h2>
+          <p>4th year Computer Systems Engineering student @ Carleton University (grad May 2026)</p>
+          <p>I live for data analysis, UI/UX design, and game dev (with a sprinkle of systems programming)</p>
+          <p>Currently reading <a class="book" href="https://global.oup.com/academic/product/the-canadian-writers-handbook-9780190164003?cc=ca&lang=en&#" target="_blank">The Canadian Writer’s Handbook by W. Messenger</a></p>
+        </section>
+
+
+        <div class="buttons">
+          <a href="https://github.com/GAchuzia" target="_blank" class="btn github">GITHUB</a>
+          <a href="https://www.linkedin.com/in/grant-achuzia-8259251b8/" target="_blank" class="btn linkedin">LINKEDIN</a>
+          <a href="https://github.com/GAchuzia" target="_blank" class="btn email">EMAIL</a>
         </div>
       </div>
-  
-      <button id="theme-toggle">Switch</button>
-    </div>
-  
-    <script src="script.js"></script>
-  </body>
-  
+    </main>
+
+    <footer class="quote">
+      “Random quotes every refresh? Holy Minecraft copycat Batman!”
+    </footer>
+  </div>
+</body>
 </html>
