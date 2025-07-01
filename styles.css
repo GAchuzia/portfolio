@@ -6,7 +6,10 @@
 
 html, body {
   height: 100%;
-  margin: 0;
+}
+
+html {
+  font-size: 24px; /* was implicit 16px */
 }
 
 body {
@@ -22,12 +25,19 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 15px;
+  gap: 18px;
   padding: 0;
   width: 100%;
-  max-width: 900px; 
+  max-width: 1000px; 
 }
 
+.header-container {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  max-width: 900px;
+}
 
 .header {
   display: flex;
@@ -46,14 +56,28 @@ body {
   flex: 1;
 }
 
+.header-img {
+  flex: 0 0 auto;       
+  max-width: 400px;
+  width: 100%;
+  height: 130px;  
+  border: 2px solid #111;
+  border-radius: 8px;
+  box-shadow: 5px 5px 5px grey;
+  object-fit: cover;  
+}
+
 .subtitle {
   font-size: 1rem;
   margin-bottom: 1px;
+  margin-left: 4px;
+  font-weight: bold;
 }
 
 .title {
   font-size: 2.9rem;
-  margin-top: -10px;
+  margin-top: -16px;
+  text-shadow: 2px 2px white;
 }
 
 .theme-switch {
@@ -68,25 +92,25 @@ body {
 
 .red-theme {
   background: #d01818;
-  padding: 12px;
+  padding: 16px;
   border: 1px solid #111;
 }
 
 .blue-theme {
   background:  #83c5f3;
-  padding: 12px;
+  padding: 16px;
   border: 1px solid #111;
 }
 
 .yellow-theme {
   background: #f4bf1a;
-  padding: 12px;
+  padding: 16px;
   border: 1px solid #111;
 }
 
 .white-theme {
   background: #ffffff;
-  padding: 12px;
+  padding: 16px;
   border: 1px solid #111;
 }
 
@@ -107,8 +131,9 @@ body {
 
 .projects {
   background: #d01818;
-  color: #111;
-  flex: 1;
+  color: #ffffff;
+  flex: 1 1 700px;
+  text-shadow: 1px 1px black;
 }
 
 .projects h2, .resume h2, .about h2 {
@@ -121,18 +146,24 @@ body {
 }
 
 .projects li, .resume p, .about p {
-  margin-bottom: 12px;
+  margin-bottom: 25px;
   text-align: center;
 }
 
 .resume {
   background: #fff;
-  flex: 1;
+  flex: 1 1 700px;
+  text-shadow: 1px 0px grey;
 }
 
-.resume-link a, .projects a{
+.resume-link a{
   text-decoration: none;
   color: #111;
+}
+
+.projects a {
+  text-decoration: none;
+  color: #ffffff;
 }
 
 .resume-link a:hover, .book:hover, .github:hover, .linkedin:hover, .email:hover {
@@ -148,21 +179,22 @@ body {
 .right-column {
   display: flex;
   flex-direction: column;
-  flex: 0 0 340px;
+  flex: 0 0 400px;
   gap: 6px;
   align-items: stretch;
 }
 
 .about {
   background: #3755a1;
-  color: #111;
+  color: #fff;
   margin-bottom: 6px;
-  flex: 1; 
+  flex: 1 1 450px; 
+  text-shadow: 1px 1px black;
 }
 
 .book {
   text-decoration: none;
-  color: #111
+  color: #fff;
 }
 
 .buttons {
@@ -177,7 +209,7 @@ body {
   text-decoration: none;
   font-weight: bold;
   font-size: 1.5em;
-  padding: 12px;
+  padding: 16px;
   border: 2px solid #111;
   border-radius: 10px;
   box-shadow: 5px 5px 5px grey;
@@ -186,6 +218,7 @@ body {
 .github {
   background: #272b1d;
   color: #fff;
+  text-shadow: 1px 1px black;
 }
 
 .linkedin {
@@ -195,7 +228,8 @@ body {
 
 .email {
   background: #d01818;
-  color: #111;
+  color: #fff;
+  text-shadow: 1px 1px black;
 }
 
 .quote {
@@ -208,4 +242,6 @@ body {
   text-align: center;
   font-style: italic;
   box-shadow: 5px 5px 5px grey;
+  color: #fff;
+  text-shadow: 1px 1px black;
 }
