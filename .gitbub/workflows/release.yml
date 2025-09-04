@@ -1,0 +1,27 @@
+name: Auto Release Website
+
+on:
+  push:
+    tags:
+      - 'v[0-9]+.[0-9]+.[0-9]+'   # only run on semantic version tags
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      # 1) Checkout repo
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      # 2) Upload site files as a release asset
+      - name: Zip website files
+        run: zip -r website.zip index.html style.css script.js assets/
+
+      # 3) Create GitHub Release
+      - name: Create Release
+        uses: softprops/action-gh-release@v1
+        with:
+          files: website.zip
