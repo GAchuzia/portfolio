@@ -1,7 +1,7 @@
 (async () => {
   const quoteElement = document.getElementById('quote');
   try {
-    const resource = await fetch('quotes.txt');
+    const resource = await fetch('assets/quotes.txt');
     if (!resource.ok) throw new Error(`HTTP ${resource.status}`);
     const text = await resource.text();
 
