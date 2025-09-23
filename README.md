@@ -1,3 +1,3 @@
 # GAchuzia's Portfolio Website
 
-Some general me-related info.
+Some me-related info.
