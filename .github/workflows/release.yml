@@ -16,12 +16,14 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
 
-      # 2) Upload site files as a release asset
-      - name: Zip website files
-        run: zip -r website.zip index.html style.css script.js assets/
+      # 2) Upload entire repo as a release asset
+      - name: Zip repository
+        run: zip -r portfolio-repository.zip .
 
       # 3) Create GitHub Release
       - name: Create Release
         uses: softprops/action-gh-release@v1
         with:
-          files: website.zip
+          files: portfolio-repository.zip
+
+# git tag vX.X.X && git push origin vX.X.X
