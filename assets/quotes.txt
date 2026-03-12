@@ -11,3 +11,4 @@
 "Matter, how tiny my share. Time, how brief my allotment. Fate, how small my roll to play. Self, all that can be mastered."
 "Hotter than a pepper no mint"
 "Quickly add another quote and push it so the commit graph stays green!"
+"An array is not a pointer!"
