@@ -260,6 +260,26 @@ body {
   opacity: 0.8;
 }
 
+/* Snake game */
+.snake-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: 100%;
+}
+.snake-canvas {
+  width: 100%;
+  max-width: 100%;
+  border: 1px solid #ccc;
+  background: #111;
+  aspect-ratio: 5 / 2;
+  display: block;
+}
+.snake-status {
+  font-size: 0.9rem;
+  color: #555;
+}
+
 /* Responsive */
 @media (max-width: 640px) {
   .showcase-item,
