@@ -1,176 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Grant Achuzia</title>
-  <meta name="description"
-    content="Computer Systems Engineering student passionate about data analysis, UI/UX design, and game development." />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Roboto+Mono:wght@400;500;600&display=swap"
-    rel="stylesheet" />
-  <link rel="stylesheet" href="css/styles.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GAchuzia – Grant Achuzia</title>
+  <link rel="stylesheet" href="css/styles.css">
 </head>
-
 <body>
-  <div class="container">
-    <!-- Main Content -->
-    <main class="main-content">
-      <!-- About Section -->
-      <section class="section">
-        <div class="name-container">
-          <h2>Grant Achuzia</h2>
-          <div class="theme-toggle">
-            <span class="theme-text" id="theme-text">dark mode</span>
-          </div>
+  <header class="site-header">
+    <nav class="nav">
+      <a href="blog.html" class="nav-link">blog</a>
+      <a href="index.html" class="nav-logo">GAchuzia</a>
+      <a href="projects.html" class="nav-link">projects</a>
+    </nav>
+  </header>
+
+  <main class="main">
+    <section class="section">
+      <h1 class="section-title">About Me</h1>
+      <p class="about-text">
+        I'm Grant Achuzia, a 4th Year Computer Systems Engineering student at <a href="https://carleton.ca/sce/beng-cse/">Carleton University</a> in Ottawa, Ontario. I love to read, I'm trying to love writing, and I (sometimes) code for fun.
+      </p>
+    </section>
+
+    <section class="section">
+      <h2 class="section-title">Showcase</h2>
+      <article class="showcase-item">
+        <div class="showcase-media" aria-hidden="true"><img src="assets/media/cell_reminders_logo.png" alt="Cell Reminders logo"></div>
+        <div class="showcase-content">
+          <h3 class="showcase-title"><a href="https://github.com/GAchuzia/cell-reminders" target="_blank" rel="noopener">Cell Reminders</a></h3>
+          <p class="showcase-tools"><em>AppScript, JavaScript, HTML/CSS</em></p>
+          <p class="showcase-desc">Due date reminders for Google Sheets.</p>
         </div>
-        <div class="content">
-          <p>
-            I'm a 4th year Computer Systems Engineering student
-            at Carleton University (graduating May 2026). I love data analysis,
-            UI/UX design, and game development (with a sprinkle of systems
-            programming).
-          </p>
-        </div>
-      </section>
+      </article>
+    </section>
+  </main>
 
-      <!-- Projects Section -->
-      <section class="section">
-        <h2>projects</h2>
-        <div class="content">
-          <div class="project-category">
-            <h3>Web Applications</h3>
-            <div class="project-list">
-              <div class="project-item">
-                <a href="https://github.com/GAchuzia/cell-reminders" target="_blank" rel="noopener noreferrer">
-                  <strong>cell reminders</strong>
-                </a>
-                <p>
-                  Google Sheets add-on/script that creates Google Calendar events linked to specific sheet cells
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <div class="project-category">
-            <h3>Games & Interactive</h3>
-            <div class="project-list">
-              <div class="project-item">
-                <a href="https://github.com/GAchuzia/trpl-m" target="_blank" rel="noopener noreferrer">
-                  <strong>trpl-m</strong>
-                </a>
-                <p>
-                  Master Mental Math in your terminal
-                </p>
-              </div>
-            </div>
-          </div>
-
-        </div>
-      </section>
-
-      <!-- Experience Section -->
-      <section class="section">
-        <h2>experience</h2>
-        <div class="content">
-          <div class="experience-item">
-            <div class="experience-header">
-              <strong>Lumentum</strong>
-              <span class="duration">Winter 2025</span>
-            </div>
-            <p class="role">Solution Software System Test Intern</p>
-          </div>
-
-          <div class="experience-item">
-            <div class="experience-header">
-              <strong>Maintenance Drone Co</strong>
-              <span class="duration">Summer 2024</span>
-            </div>
-            <p class="role">Software Developer Intern</p>
-          </div>
-
-          <div class="experience-item">
-            <div class="experience-header">
-              <strong>Roof Maintenance Solutions</strong>
-              <span class="duration">Winter 2023</span>
-            </div>
-            <p class="role">Software Developer Intern</p>
-          </div>
-
-      </section>
-
-      <!-- Skills Section -->
-      <section class="section">
-        <h2>skills</h2>
-        <div class="content">
-          <div class="skills-grid">
-            <div class="skill-category">
-              <h3>Languages</h3>
-              <p>
-                Python, JavaScript, TypeScript, C/C++, SQL, Java
-              </p>
-            </div>
-            <div class="skill-category">
-              <h3>Technologies</h3>
-              <p>
-                Git, PostgreSQL, Godot
-              </p>
-            </div>
-            <div class="skill-category">
-              <h3>Frameworks & Libraries</h3>
-              <p>
-                PyTorch,
-                React, Node.js, Flask
-              </p>
-            </div>
-            <div class="skill-category">
-              <h3>Tools & Platforms</h3>
-              <p>
-                VS Code, Figma, Affinity Designer, Jira
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Contact Section -->
-      <section class="section">
-        <h2>contact</h2>
-        <div class="content">
-          <div class="contact-links">
-            <a href="https://github.com/GAchuzia" target="_blank" rel="noopener noreferrer" class="contact-link">
-              GitHub
-            </a>
-            <a href="https://www.linkedin.com/in/grant-achuzia-8259251b8/" target="_blank" rel="noopener noreferrer"
-              class="contact-link">
-              LinkedIn
-            </a>
-            <a href="assets/Resume_GrantAchuzia.pdf" target="_blank" class="contact-link">
-              Resume
-            </a>
-            <a href="mailto:grant.achuzia@example.com" class="contact-link">
-              Email
-            </a>
-          </div>
-        </div>
-      </section>
-
-    </main>
-
-    <!-- Footer -->
-    <footer class="footer">
-      <div class="quote-container">
-        <p class="quote" id="quote">
-          "Random quotes every page refresh? Holy Minecraft copycat Batman!"
-        </p>
-      </div>
-    </footer>
-  </div>
-
+  <footer class="site-footer">
+    <span class="footer-copy">© 2026 Grant Achuzia</span>
+    <div class="footer-links">
+      <a href="mailto:grant.achuzia@gmail.com">Email</a>
+      <a href="https://www.linkedin.com/in/grant-achuzia-8259251b8/" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://github.com/GAchuzia" target="_blank" rel="noopener">Github</a>
+      <a href="assets/Resume_GrantAchuzia.pdf" download>Resume</a>
+    </div>
+  </footer>
   <script src="js/script.js"></script>
 </body>
-
 </html>
