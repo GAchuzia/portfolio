@@ -80,12 +80,12 @@ body {
 .showcase-item {
   display: flex;
   gap: 1.5rem;
-  align-items: flex-start;
+  align-items: center;
 }
 .showcase-media {
   flex-shrink: 0;
-  width: 140px;
-  height: 140px;
+  width: 100px;
+  height: 100px;
   background: #e8e8e8;
   border: 1px solid #ccc;
   border-radius: 12px;
@@ -145,7 +145,7 @@ body {
 .project-item {
   display: flex;
   gap: 1.5rem;
-  align-items: flex-start;
+  align-items: center;
   padding: 1.25rem 0;
   border-bottom: 1px solid #eee;
 }
@@ -154,8 +154,8 @@ body {
 }
 .project-media {
   flex-shrink: 0;
-  width: 120px;
-  height: 120px;
+  width: 100px;
+  height: 100px;
   background: #e8e8e8;
   border: 1px solid #ccc;
   border-radius: 12px;
