@@ -1,3 +1,3 @@
 # GAchuzia's [Portfolio Website](https://gachuzia.com/)
 
-Some me-related info.
+Some me-related info!
