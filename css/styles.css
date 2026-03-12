@@ -259,6 +259,18 @@ body {
 .footer-links a:hover {
   opacity: 0.8;
 }
+.footer-link-email:hover {
+  color: #d93025;
+}
+.footer-link-linkedin:hover {
+  color: #0a66c2; 
+}
+.footer-link-github:hover {
+  color: #2ea44f;
+}
+.footer-link-resume:hover {
+  color: #facc15;
+}
 
 /* Responsive */
 @media (max-width: 640px) {
