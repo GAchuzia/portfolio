@@ -8,3 +8,20 @@
     }
   });
 })();
+
+(function () {
+  const el = document.getElementById('random-quote');
+  if (!el) return;
+  const base = window.location.pathname.indexOf('blog/') !== -1 ? '../' : '';
+  fetch(base + 'assets/quotes.txt')
+    .then(function (r) { return r.ok ? r.text() : Promise.reject(); })
+    .then(function (text) {
+      const lines = text.split('\n').map(function (line) {
+        return line.replace(/^\s*"?|"?\s*$/g, '').trim();
+      }).filter(Boolean);
+      if (lines.length) {
+        el.textContent = '"' + lines[Math.floor(Math.random() * lines.length)] + '"';
+      }
+    })
+    .catch(function () { el.textContent = ''; });
+})();
