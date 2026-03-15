@@ -284,7 +284,19 @@ a:hover {
   font-size: 0.9rem;
 }
 .footer-links a:hover {
-  color: #6b21a8;
+  opacity: 0.8;
+}
+.footer-link-email:hover {
+  color: #d93025;
+}
+.footer-link-linkedin:hover {
+  color: #0a66c2;
+}
+.footer-link-github:hover {
+  color: #2ea44f;
+}
+.footer-link-resume:hover {
+  color: #facc15;
 }
 
 /* Responsive */
