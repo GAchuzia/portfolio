@@ -79,6 +79,19 @@ a:hover {
   max-width: 65ch;
 }
 
+.something-fun-caption {
+  margin: 0 0 1rem;
+  color: #444;
+}
+.something-fun-gif {
+  display: block;
+  max-width: 100%;
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+  object-position: top;
+}
+
 /* Showcase (home) */
 .showcase-item {
   display: flex;
