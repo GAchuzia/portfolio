@@ -20,18 +20,41 @@
   <main class="main">
     <section class="section">
       <h1 class="section-title">About Me</h1>
-      <ul>
-        <li>I'm Chukwudubanyi <em>[Chuk-woo-doo-bah-nyee] </em>Grant Achuzia</li>
-        <li>Computer Systems Engineering at <a href="https://carleton.ca/sce/">Carleton University</a>🍁</li>
-        <li>Interested in DevOps, Data Science, and Design</li>
-        <li>Sometimes, I even <a href="https://en.wikipedia.org/wiki/Lilith%27s_Brood" target="_blank" rel="noopener">read</a></li>
-      </ul>
+      <p class="about-line">I'm Chukwudubanyi <em>[Chuk-woo-doo-bah-nyee]</em> Grant Achuzia</p>
+      <p class="about-line">
+        Studying Computer Systems Engineering at
+        <a href="https://carleton.ca/sce/" target="_blank" rel="noopener">Carleton University</a>🍁
+      </p>
+      <p class="about-line">Interested in DevOps, Data Science, and Design</p>
+      <p class="about-line">
+        Sometimes, I even
+        <a href="https://en.wikipedia.org/wiki/Lilith%27s_Brood" target="_blank" rel="noopener">read</a>
+      </p>
     </section>
 
-    <section class="section">
-      <h2 class="section-title">Something Fun</h2>
-      <p class="something-fun-caption">Enjoy this gif while I think of fun things to add to the home page</p>
-      <img src="assets/media/gachuzia-dvdify.gif" alt="Something fun" class="something-fun-gif">
+    <section class="section fun-stuff">
+      <h2 class="section-title fun-stuff-title">Fun Stuff</h2>
+      <div class="pi-game" data-pi-game>
+        <h3 class="pi-heading">How Many Digits of π Do You Know?</h3>
+        <p class="pi-status" id="pi-status" aria-live="polite">Start typing the digits of π after 3.</p>
+        <div class="pi-display" aria-label="Your guess so far">
+          <span class="pi-prefix">3.</span>
+          <span id="pi-digits"></span>
+        </div>
+        <div class="pi-input-row">
+          <input
+            id="pi-input"
+            class="pi-input"
+            inputmode="numeric"
+            autocomplete="off"
+            spellcheck="false"
+            aria-describedby="pi-status"
+            placeholder="Type here (numbers only)"
+          />
+          <button type="button" class="pi-retry-btn" id="pi-retry" hidden>Play again</button>
+        </div>
+        <p class="pi-fact" id="pi-fact"></p>
+      </div>
     </section>
   </main>
 
@@ -47,6 +70,7 @@
     </div>
   </footer>
   <script src="js/script.js"></script>
+  <script src="js/pi-game.js"></script>
 </body>
 
 </html>
