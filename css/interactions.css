@@ -38,7 +38,7 @@
 .nigeria:hover .flag-part:last-child { animation-delay: 0.07s; }
 
 /* ── Flag text — Canada (red-white-red) ── */
-.canada:hover .flag-part { color: #d90429; animation: bounce 0.52s ease-out; }
+.canada:hover .flag-part { color: #ec3c53; animation: bounce 0.52s ease-out; }
 .canada:hover .flag-part:last-child { animation-delay: 0.07s; }
 
 /* ── Funny pronunciation link ── */
