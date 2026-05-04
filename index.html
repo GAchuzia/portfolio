@@ -4,75 +4,106 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>GAchuzia – Grant Achuzia</title>
-  <link rel="stylesheet" href="css/styles.css">
+  <title>Grant Achuzia</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="css/home.css">
 </head>
 
 <body>
-  <header class="site-header">
-    <nav class="nav">
-      <a href="blog.html" class="nav-link">blog</a>
-      <a href="index.html" class="nav-logo">GAchuzia</a>
-      <a href="projects.html" class="nav-link">projects</a>
-    </nav>
-  </header>
+  <div class="portfolio">
 
-  <main class="main">
-    <section class="section">
-      <h1 class="section-title">About Me</h1>
-      <ul class="about-list">
-        <li>I'm Chukwudubanyi <em>[Chuk-woo-doo-bah-nyee]</em> Grant Achuzia</li>
-        <li>
-          Studying Computer Systems Engineering at
-          <a href="https://carleton.ca/sce/" target="_blank" rel="noopener">Carleton University</a>🍁
-        </li>
-        <li>Interested in DevOps, Data Science, and Design</li>
-        <li>
-          Sometimes, I even
-          <a href="https://en.wikipedia.org/wiki/Lilith%27s_Brood" target="_blank" rel="noopener">read</a>
-        </li>
-      </ul>
-    </section>
+    <div class="grid">
 
-    <section class="section fun-stuff">
-      <h2 class="section-title fun-stuff-title">Fun Stuff</h2>
-      <div class="pi-game" data-pi-game>
-        <h3 class="pi-heading">How Many Digits of π Do You Know?</h3>
-        <p class="pi-status" id="pi-status" aria-live="polite">Start typing the digits of π after 3.</p>
-        <div class="pi-display" aria-label="Your guess so far">
-          <span class="pi-prefix">3.</span>
-          <span id="pi-digits"></span>
-        </div>
-        <div class="pi-input-row">
-          <input
-            id="pi-input"
-            class="pi-input"
-            inputmode="numeric"
-            autocomplete="off"
-            spellcheck="false"
-            aria-describedby="pi-status"
-            placeholder="Type here (numbers only)"
-          />
-          <button type="button" class="pi-retry-btn" id="pi-retry" hidden>Play again</button>
-        </div>
-        <p class="pi-fact" id="pi-fact"></p>
+      <div class="cell hero">
+        <h1>GRANT ACHUZIA</h1>
+        <div class="tagline">ENGINEER &middot; DESIGNER &middot; HACKER</div>
       </div>
-    </section>
-  </main>
 
-  <p class="random-quote" id="random-quote" aria-live="polite"></p>
-  <footer class="site-footer">
-    <span class="footer-copy">© 2026 Grant Achuzia</span>
-    <div class="footer-links">
-      <a href="mailto:grant.achuzia@gmail.com" class="footer-link-email">Email</a>
-      <a href="https://www.linkedin.com/in/grant-achuzia-8259251b8/" target="_blank" rel="noopener"
-        class="footer-link-linkedin">LinkedIn</a>
-      <a href="https://github.com/GAchuzia" target="_blank" rel="noopener" class="footer-link-github">GitHub</a>
-      <a href="assets/Resume_GrantAchuzia.pdf" download class="footer-link-resume">Resume</a>
+      <div class="cell about">
+        <div class="cell-header">ABOUT</div>
+        <p class="body-text">
+          I'm Chukwudubanyi <span class="italic">[Chuk-woo-doo-bah-nyee]</span>
+          Grant Achuzia. Born in Nigeria, grew up in Canada.
+        </p>
+        <p class="body-text">
+          Computer Systems Engineering @ Carleton University
+        </p>
+        <p class="body-text">
+          Outside of work, I love to read, play volleyball,
+          and despite my best efforts, code
+        </p>
+      </div>
+
+      <div class="cell projects">
+        <div class="cell-header">PROJECTS</div>
+        <ul class="project-list">
+          <li>
+            <a href="https://github.com/GAchuzia" target="_blank" rel="noopener noreferrer">cu-bytes</a>
+            - AI food scanning app for Carleton University
+          </li>
+          <li>
+            <a href="https://github.com/GAchuzia" target="_blank" rel="noopener noreferrer">trpl-m</a>
+            - The most customizable mental math practice website
+          </li>
+          <li>
+            <a href="https://github.com/GAchuzia" target="_blank" rel="noopener noreferrer">food-list</a>
+            - List all the foods you can, until failure
+          </li>
+          <li>
+            <a href="https://github.com/GAchuzia" target="_blank" rel="noopener noreferrer">cirillo</a>
+            - My favourite customizable pomodoro app
+          </li>
+        </ul>
+      </div>
+
+      <div class="cell experience">
+        <div class="cell-header">EXPERIENCE</div>
+        <ul class="exp-list">
+          <li>
+            <div class="company">Lumentum</div>
+            System Software &amp; Design Verification
+          </li>
+          <li>
+            <div class="company">Maintenance Drone Co.</div>
+            Software Developer
+          </li>
+          <li>
+            <div class="company">RBC BorealisAI Lets Solve It Program</div>
+            Engineering Intern
+          </li>
+          <li>
+            <div class="company">Roof Maintenance Solutions</div>
+            Software Developer
+          </li>
+        </ul>
+      </div>
+
+      <div class="social-col">
+        <a href="https://github.com/GAchuzia" class="social-link github" target="_blank" rel="noopener noreferrer">
+          <span>GITHUB</span>
+        </a>
+        <a href="https://linkedin.com/in/grantachuzia" class="social-link linkedin" target="_blank"
+          rel="noopener noreferrer">
+          <span>LINKEDIN</span>
+        </a>
+        <a href="mailto:hello@gachuzia.com" class="social-link email">
+          <span>EMAIL</span>
+        </a>
+      </div>
+
     </div>
-  </footer>
-  <script src="js/script.js"></script>
-  <script src="js/pi-game.js"></script>
+
+    <div class="footer">
+      <div class="quote" id="quote" aria-live="polite"></div>
+      <div class="copyright">&copy; Grant Achuzia</div>
+    </div>
+
+  </div>
+
+  <script src="js/portfolio.js" defer></script>
 </body>
 
 </html>
