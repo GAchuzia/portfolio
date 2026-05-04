@@ -1,0 +1,71 @@
+/* ── Keyframe animations ── */
+@keyframes bounce {
+  0%   { transform: translateY(0); }
+  35%  { transform: translateY(-7px); }
+  65%  { transform: translateY(-3px); }
+  100% { transform: translateY(0); }
+}
+
+@keyframes social-slide {
+  from { transform: translateX(-6px); opacity: 0.6; }
+  to   { transform: translateX(0);    opacity: 1;   }
+}
+
+/* ── Transitions ── */
+.social-link            { transition: filter 0.15s ease; }
+.social-link span       { display: inline-block; transition: letter-spacing 0.2s ease, transform 0.18s ease; }
+.project-list li a      { transition: color 0.15s ease, border-color 0.15s ease; }
+.pi-retry               { transition: background 0.15s ease, color 0.15s ease; }
+.funny-link             { display: inline-block; transition: color 0.18s ease; }
+.flag-part              { display: inline-block; transition: color 0.2s ease; }
+.resume-link            { transition: background 0.15s ease, color 0.15s ease; }
+
+/* ── Project links — Mondrian color on hover ── */
+.project-list li:nth-child(odd)  a:hover { color: var(--yellow); border-color: var(--yellow); }
+.project-list li:nth-child(even) a:hover { color: var(--black);  border-color: var(--black);  }
+
+/* ── Pi retry button ── */
+.pi-retry:hover { background: var(--yellow); color: var(--black); }
+
+/* ── Social links — letter-spread + lift ── */
+.social-link:hover          { filter: brightness(0.9); }
+.social-link:hover span     { letter-spacing: 0.22em; transform: translateY(-3px); }
+
+/* ── Flag text — Nigeria (green-white-green) ── */
+.country              { white-space: nowrap; cursor: default; }
+
+.nigeria:hover .flag-part { color: #009a44; animation: bounce 0.52s ease-out; }
+.nigeria:hover .flag-part:last-child { animation-delay: 0.07s; }
+
+/* ── Flag text — Canada (red-white-red) ── */
+.canada:hover .flag-part { color: #d90429; animation: bounce 0.52s ease-out; }
+.canada:hover .flag-part:last-child { animation-delay: 0.07s; }
+
+/* ── Funny pronunciation link ── */
+.funny-link:hover { color: var(--yellow); animation: bounce 0.5s ease-out; }
+
+/* ── About section inline link ── */
+.about a {
+  display: inline-block;
+  color: var(--white);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+  transition: color 0.15s ease, border-color 0.15s ease;
+}
+
+.about a:hover { color: var(--yellow); border-color: var(--yellow); animation: bounce 0.5s ease-out; }
+
+/* ── Resume link ── */
+.resume-link {
+  display: inline-block;
+  font-family: var(--bebas);
+  font-size: clamp(1rem, 1.5vw, 1.18rem);
+  letter-spacing: 0.14em;
+  color: var(--black);
+  text-decoration: none;
+  border: 2px solid var(--black);
+  padding: 0.38rem 1.3rem;
+  margin-top: 1.75rem;
+}
+
+.resume-link:hover { background: var(--black); color: var(--white); }
