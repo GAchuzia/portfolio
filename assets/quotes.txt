@@ -1,3 +1,4 @@
+"Random quotes every page refresh? Holy Minecraft copy Batman!"
 "Chances are you'll see the exact same quote back-to-back; oh the joys of pseudo-randomness"
 "At the rate I'm running out of quote ideas I might have to "borrow" some from Reddit"
 "Seven sizzling sausages sizzling in a saucepan"
@@ -12,4 +13,3 @@
 "Hotter than a pepper no mint"
 "Quickly add another quote and push it so the commit graph stays green"
 "An array is not a pointer"
-"Random quotes every refresh? Holy Minecraft copy Batman!"
