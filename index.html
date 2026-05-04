@@ -4,75 +4,125 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>GAchuzia – Grant Achuzia</title>
+  <title>Grant Achuzia</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/interactions.css">
 </head>
 
 <body>
-  <header class="site-header">
-    <nav class="nav">
-      <a href="blog.html" class="nav-link">blog</a>
-      <a href="index.html" class="nav-logo">GAchuzia</a>
-      <a href="projects.html" class="nav-link">projects</a>
-    </nav>
-  </header>
+  <div class="portfolio">
 
-  <main class="main">
-    <section class="section">
-      <h1 class="section-title">About Me</h1>
-      <ul class="about-list">
-        <li>I'm Chukwudubanyi <em>[Chuk-woo-doo-bah-nyee]</em> Grant Achuzia</li>
-        <li>
-          Studying Computer Systems Engineering at
-          <a href="https://carleton.ca/sce/" target="_blank" rel="noopener">Carleton University</a>🍁
-        </li>
-        <li>Interested in DevOps, Data Science, and Design</li>
-        <li>
-          Sometimes, I even
-          <a href="https://en.wikipedia.org/wiki/Lilith%27s_Brood" target="_blank" rel="noopener">read</a>
-        </li>
-      </ul>
-    </section>
+    <div class="grid">
 
-    <section class="section fun-stuff">
-      <h2 class="section-title fun-stuff-title">Fun Stuff</h2>
-      <div class="pi-game" data-pi-game>
-        <h3 class="pi-heading">How Many Digits of π Do You Know?</h3>
-        <p class="pi-status" id="pi-status" aria-live="polite">Start typing the digits of π after 3.</p>
-        <div class="pi-display" aria-label="Your guess so far">
-          <span class="pi-prefix">3.</span>
-          <span id="pi-digits"></span>
-        </div>
-        <div class="pi-input-row">
-          <input
-            id="pi-input"
-            class="pi-input"
-            inputmode="numeric"
-            autocomplete="off"
-            spellcheck="false"
-            aria-describedby="pi-status"
-            placeholder="Type here (numbers only)"
-          />
-          <button type="button" class="pi-retry-btn" id="pi-retry" hidden>Play again</button>
-        </div>
-        <p class="pi-fact" id="pi-fact"></p>
+      <div class="cell hero">
+        <h1>GRANT ACHUZIA</h1>
+        <div class="tagline">ENGINEER &middot; DESIGNER &middot; HACKER</div>
       </div>
-    </section>
-  </main>
 
-  <p class="random-quote" id="random-quote" aria-live="polite"></p>
-  <footer class="site-footer">
-    <span class="footer-copy">© 2026 Grant Achuzia</span>
-    <div class="footer-links">
-      <a href="mailto:grant.achuzia@gmail.com" class="footer-link-email">Email</a>
-      <a href="https://www.linkedin.com/in/grant-achuzia-8259251b8/" target="_blank" rel="noopener"
-        class="footer-link-linkedin">LinkedIn</a>
-      <a href="https://github.com/GAchuzia" target="_blank" rel="noopener" class="footer-link-github">GitHub</a>
-      <a href="assets/Resume_GrantAchuzia.pdf" download class="footer-link-resume">Resume</a>
+      <div class="cell about">
+        <div class="cell-header">ABOUT</div>
+        <p class="body-text">
+          I'm Chukwudubanyi <span class="italic funny-link">[Chuk-woo-doo-bah-nyee]</span>
+          Grant Achuzia. Born in <span class="country nigeria"><span class="flag-part">Ni</span>ge<span class="flag-part">ria</span></span>, grew up in <span class="country canada"><span class="flag-part">Ca</span>na<span class="flag-part">da</span></span>.
+        </p>
+        <p class="body-text">
+          Computer Systems Engineering @ Carleton University
+        </p>
+        <p class="body-text">
+          Outside of work, I love to read, play volleyball,
+          and despite my best efforts, code
+        </p>
+        <p class="body-text">
+          I can even be <a href="https://youtu.be/dQw4w9WgXcQ" target="_blank" rel="noopener noreferrer">funny</a> sometimes</p>
+      </div>
+
+      <div class="cell projects">
+        <div class="projects-main">
+          <div class="cell-header">PROJECTS</div>
+          <ul class="project-list">
+            <li>
+              <a href="https://github.com/GAchuzia/cu-bytes" target="_blank" rel="noopener noreferrer">cu-bytes</a>
+              - AI food scanning app for Carleton University
+            </li>
+            <li>
+              <a href="https://github.com/GAchuzia/trpl-m" target="_blank" rel="noopener noreferrer">trpl-m</a>
+              - Ultra-customizable mental math practice
+            </li>
+            <li>
+              <a href="https://github.com/GAchuzia/food-list" target="_blank" rel="noopener noreferrer">food-list</a>
+              - List all the foods you can, until failure
+            </li>
+            <li>
+              <a href="https://github.com/GAchuzia/cirillo" target="_blank" rel="noopener noreferrer">cirillo</a>
+              - My pomodoro app
+            </li>
+          </ul>
+        </div>
+
+        <section class="fun-panel" data-pi-game>
+          <div class="cell-header">SOMETHING FUN</div>
+          <p class="fun-subtitle">How Many Digits of Pi Do You Know?</p>
+          <div id="pi-status" class="pi-status" aria-live="polite"></div>
+          <div id="pi-digits" class="pi-digits" aria-live="polite"></div>
+          <div class="pi-entry-row">
+            <input id="pi-input" class="pi-input" type="text" inputmode="numeric" autocomplete="off"
+              placeholder="Type digits after 3." aria-label="Type digits of pi after three point">
+            <button id="pi-retry" class="pi-retry" type="button" hidden>Try Again</button>
+          </div>
+          <p id="pi-fact" class="pi-fact" aria-live="polite"></p>
+        </section>
+      </div>
+
+      <div class="cell experience">
+        <div class="cell-header">EXPERIENCE</div>
+        <ul class="exp-list">
+          <li>
+            <div class="company">Lumentum</div>
+            System Software &amp; Design Verification Intern
+          </li>
+          <li>
+            <div class="company">Maintenance Drone Co.</div>
+            Software Developer Intern
+          </li>
+          <li>
+            <div class="company">RBC BorealisAI Lets Solve It Program</div>
+            Engineering Intern
+          </li>
+          <li>
+            <div class="company">Roof Maintenance Solutions</div>
+            Software Developer Intern
+          </li>
+        </ul>
+        <a href="assets/Resume_GrantAchuzia.pdf" class="resume-link" target="_blank" rel="noopener noreferrer">RESUME →</a>
+      </div>
+
+      <div class="social-col">
+        <a href="https://github.com/GAchuzia" class="social-link github" target="_blank" rel="noopener noreferrer">
+          <span>GITHUB</span>
+        </a>
+        <a href="https://www.linkedin.com/in/grant-achuzia/" class="social-link linkedin" target="_blank"
+          rel="noopener noreferrer">
+          <span>LINKEDIN</span>
+        </a>
+        <a href="mailto:grant.achuzia@gmail.com" class="social-link email">
+          <span>EMAIL</span>
+        </a>
+      </div>
+
     </div>
-  </footer>
-  <script src="js/script.js"></script>
-  <script src="js/pi-game.js"></script>
+
+    <div class="footer">
+      <div class="quote" id="quote" aria-live="polite"></div>
+    </div>
+
+  </div>
+
+  <script src="js/quotes.js" defer></script>
+  <script src="js/pi-game.js" defer></script>
 </body>
 
 </html>
