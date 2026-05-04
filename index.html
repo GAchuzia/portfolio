@@ -38,25 +38,40 @@
       </div>
 
       <div class="cell projects">
-        <div class="cell-header">PROJECTS</div>
-        <ul class="project-list">
-          <li>
-            <a href="https://github.com/GAchuzia" target="_blank" rel="noopener noreferrer">cu-bytes</a>
-            - AI food scanning app for Carleton University
-          </li>
-          <li>
-            <a href="https://github.com/GAchuzia" target="_blank" rel="noopener noreferrer">trpl-m</a>
-            - The most customizable mental math practice website
-          </li>
-          <li>
-            <a href="https://github.com/GAchuzia" target="_blank" rel="noopener noreferrer">food-list</a>
-            - List all the foods you can, until failure
-          </li>
-          <li>
-            <a href="https://github.com/GAchuzia" target="_blank" rel="noopener noreferrer">cirillo</a>
-            - My favourite customizable pomodoro app
-          </li>
-        </ul>
+        <div class="projects-main">
+          <div class="cell-header">PROJECTS</div>
+          <ul class="project-list">
+            <li>
+              <a href="https://github.com/GAchuzia" target="_blank" rel="noopener noreferrer">cu-bytes</a>
+              - AI food scanning app for Carleton University
+            </li>
+            <li>
+              <a href="https://github.com/GAchuzia" target="_blank" rel="noopener noreferrer">trpl-m</a>
+              - The most customizable mental math practice website
+            </li>
+            <li>
+              <a href="https://github.com/GAchuzia" target="_blank" rel="noopener noreferrer">food-list</a>
+              - List all the foods you can, until failure
+            </li>
+            <li>
+              <a href="https://github.com/GAchuzia" target="_blank" rel="noopener noreferrer">cirillo</a>
+              - My favourite customizable pomodoro app
+            </li>
+          </ul>
+        </div>
+
+        <section class="fun-panel" data-pi-game>
+          <div class="cell-header">SOMETHING FUN</div>
+          <p class="fun-subtitle">How Many Digits of Pi Do You Know?</p>
+          <div id="pi-status" class="pi-status" aria-live="polite"></div>
+          <div id="pi-digits" class="pi-digits" aria-live="polite"></div>
+          <div class="pi-entry-row">
+            <input id="pi-input" class="pi-input" type="text" inputmode="numeric" autocomplete="off"
+              placeholder="Type digits after 3." aria-label="Type digits of pi after three point">
+            <button id="pi-retry" class="pi-retry" type="button" hidden>Try Again</button>
+          </div>
+          <p id="pi-fact" class="pi-fact" aria-live="polite"></p>
+        </section>
       </div>
 
       <div class="cell experience">
@@ -104,6 +119,7 @@
   </div>
 
   <script src="js/quotes.js" defer></script>
+  <script src="js/pi-game.js" defer></script>
 </body>
 
 </html>
