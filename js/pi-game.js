@@ -39,7 +39,6 @@
     input.disabled = false;
     input.value = '';
     digitsEl.innerHTML = '';
-    statusEl.textContent = 'Start typing the digits of π after 3. (numbers only)';
     factEl.textContent = '';
     retryBtn.hidden = true;
     input.focus();
