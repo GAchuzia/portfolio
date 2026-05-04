@@ -150,11 +150,6 @@ body {
   justify-content: center;
   text-decoration: none;
   min-height: 72px;
-  transition: filter 0.12s ease;
-}
-
-.social-link:hover {
-  filter: brightness(0.88);
 }
 
 .social-link span {
@@ -263,11 +258,6 @@ body {
   color: var(--white);
   text-decoration: none;
   border-bottom: 1px solid rgba(255, 255, 255, 0.3);
-  transition: border-color 0.12s;
-}
-
-.project-list li a:hover {
-  border-color: var(--white);
 }
 
 .fun-panel {
@@ -381,10 +371,6 @@ body {
   cursor: pointer;
 }
 
-.pi-retry:hover {
-  background: var(--yellow);
-  color: var(--black);
-}
 
 .pi-fact {
   margin-top: 0.6rem;
