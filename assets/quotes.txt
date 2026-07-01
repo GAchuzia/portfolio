@@ -14,3 +14,4 @@
 "An array is not a pointer"
 "Buffalo buffalo Buffalo buffalo buffalo buffalo Buffalo buffalo"
 "When you know the notes to sing, You can sing most anything!"
+"I would have lived in piece. But my enemies brought me war."
