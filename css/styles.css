@@ -15,7 +15,8 @@
   --gap: 5px;
   --bebas: "Bebas Neue", sans-serif;
   --mono: "Space Mono", monospace;
-  --stack-breakpoint: 900px;
+  --cell-px: clamp(1rem, 2.25vw, 2.25rem);
+  --cell-py: clamp(0.85rem, 1.8vh, 2rem);
 }
 
 html,
@@ -42,7 +43,7 @@ body {
   gap: var(--gap);
 }
 
-/* ── Main grid (desktop: Mondrian; fills space below hero row) ── */
+/* ── Main grid ── */
 .grid {
   flex: 1;
   min-height: 0;
@@ -54,7 +55,8 @@ body {
 }
 
 .cell {
-  padding: 2rem 2.25rem;
+  padding: var(--cell-py) var(--cell-px);
+  overflow: hidden;
 }
 
 /* ── Hero ── */
@@ -67,13 +69,14 @@ body {
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding: 2.5rem 2rem;
-  min-height: clamp(200px, 22vh, 320px);
+  padding: clamp(0.75rem, 1.5vh, 2rem) var(--cell-px);
+  min-height: clamp(90px, 18vh, 240px);
+  overflow: visible;
 }
 
 .hero h1 {
   font-family: var(--bebas);
-  font-size: clamp(5rem, 9vw, 8.2rem);
+  font-size: clamp(3rem, min(9vw, 14vh), 8.2rem);
   color: var(--black);
   line-height: 0.92;
   letter-spacing: 0.02em;
@@ -81,10 +84,10 @@ body {
 
 .hero .tagline {
   font-family: var(--bebas);
-  font-size: clamp(1.1rem, 2.05vw, 1.4rem);
+  font-size: clamp(0.75rem, min(1.8vw, 2vh), 1.4rem);
   color: var(--black);
   letter-spacing: 0.2em;
-  margin-top: 0.85rem;
+  margin-top: clamp(0.3rem, 0.6vh, 0.85rem);
 }
 
 /* ── About ── */
@@ -97,7 +100,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 1.25rem;
+  gap: clamp(0.35rem, 0.9vh, 1rem);
 }
 
 /* ── Projects ── */
@@ -113,6 +116,7 @@ body {
   align-items: center;
   justify-content: flex-start;
   gap: 0;
+  overflow: visible;
 }
 
 /* ── Experience ── */
@@ -140,6 +144,7 @@ body {
   gap: var(--gap);
   align-items: stretch;
   background: transparent;
+  overflow: visible;
 }
 
 .social-link {
@@ -149,12 +154,12 @@ body {
   align-items: center;
   justify-content: center;
   text-decoration: none;
-  min-height: 72px;
+  min-height: clamp(40px, 5.5vh, 72px);
 }
 
 .social-link span {
   font-family: var(--bebas);
-  font-size: clamp(1.55rem, 2.45vw, 2.1rem);
+  font-size: clamp(1rem, 2.2vw, 2.1rem);
   letter-spacing: 0.12em;
 }
 
@@ -187,7 +192,7 @@ body {
   flex-shrink: 0;
   margin-top: auto;
   background: var(--blue);
-  padding: 1.35rem 2rem 1.45rem;
+  padding: clamp(0.6rem, 1vh, 1.35rem) clamp(1rem, 2vw, 2rem) clamp(0.65rem, 1vh, 1.45rem);
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -196,23 +201,23 @@ body {
 
 .footer .quote {
   font-family: var(--mono);
-  font-size: clamp(0.95rem, 1.5vw, 1.2rem);
+  font-size: clamp(0.7rem, 1.3vw, 1.2rem);
   color: var(--white);
   min-height: 1.2em;
 }
 
 .footer .copyright {
   font-family: var(--mono);
-  font-size: clamp(0.8rem, 1.22vw, 0.98rem);
+  font-size: clamp(0.65rem, 1.1vw, 0.98rem);
   color: rgba(255, 255, 255, 0.5);
 }
 
 /* ── Shared type styles ── */
 .cell-header {
   font-family: var(--bebas);
-  font-size: clamp(2.15rem, 3.25vw, 2.95rem);
+  font-size: clamp(1.3rem, 3.25vw, 2.95rem);
   letter-spacing: 0.1em;
-  margin-bottom: 1.5rem;
+  margin-bottom: clamp(0.4rem, 1.2vh, 1.5rem);
 }
 
 .about .cell-header {
@@ -229,8 +234,8 @@ body {
 
 .body-text {
   font-family: var(--mono);
-  font-size: clamp(0.96rem, 1.42vw, 1.2rem);
-  line-height: 1.7;
+  font-size: clamp(0.68rem, 1.2vw, 1.1rem);
+  line-height: 1.65;
 }
 
 .about .body-text {
@@ -241,7 +246,7 @@ body {
   list-style: none;
   display: flex;
   flex-direction: column;
-  gap: 1.25rem;
+  gap: clamp(0.3rem, 0.85vh, 1.1rem);
   width: 100%;
   max-width: 90%;
   margin: 0 auto;
@@ -249,9 +254,9 @@ body {
 
 .project-list li {
   font-family: var(--mono);
-  font-size: clamp(0.94rem, 1.3vw, 1.12rem);
+  font-size: clamp(0.68rem, 1.1vw, 1.05rem);
   color: var(--white);
-  line-height: 1.65;
+  line-height: 1.6;
 }
 
 .project-list li a {
@@ -261,11 +266,11 @@ body {
 }
 
 .fun-panel {
-  width: calc(100% + 4.5rem);
-  margin: 0 -2.25rem -2rem;
+  width: calc(100% + 2 * var(--cell-px));
+  margin: 0 calc(-1 * var(--cell-px)) calc(-1 * var(--cell-py));
   background: var(--black);
   color: var(--yellow);
-  padding: 1.25rem 2.25rem 1.4rem;
+  padding: clamp(0.5rem, 1vh, 1.1rem) var(--cell-px) clamp(0.5rem, 1vh, 1.2rem);
   text-align: center;
 }
 
@@ -277,24 +282,26 @@ body {
   align-items: center;
   justify-content: center;
   min-height: 0;
-  padding-bottom: 1.1rem;
+  overflow: hidden;
+  padding-bottom: clamp(0.4rem, 0.8vh, 1rem);
 }
 
 .projects-main .cell-header {
-  margin-bottom: 1.25rem;
+  margin-bottom: clamp(0.4rem, 0.8vh, 1.1rem);
 }
 
 .fun-panel .cell-header {
-  margin-bottom: 0.5rem;
+  font-size: clamp(1.1rem, 2.2vw, 2.1rem);
+  margin-bottom: clamp(0.15rem, 0.35vh, 0.5rem);
   color: var(--yellow);
 }
 
 .fun-subtitle {
   font-family: var(--mono);
   color: var(--yellow);
-  font-size: clamp(0.9rem, 1.2vw, 1.05rem);
+  font-size: clamp(0.65rem, 1vw, 1rem);
   line-height: 1.4;
-  margin-bottom: 0.65rem;
+  margin-bottom: clamp(0.2rem, 0.45vh, 0.65rem);
   text-align: center;
 }
 
@@ -305,8 +312,8 @@ body {
   background: var(--white);
   color: var(--black);
   font-family: var(--mono);
-  font-size: clamp(0.9rem, 1.08vw, 1.02rem);
-  padding: 0.42rem 0.55rem;
+  font-size: clamp(0.7rem, 1vw, 1rem);
+  padding: 0.38rem 0.55rem;
   outline: none;
 }
 
@@ -315,13 +322,13 @@ body {
 }
 
 .pi-status {
-  margin-top: 0.55rem;
-  min-height: 1.35em;
+  margin-top: clamp(0.2rem, 0.45vh, 0.55rem);
+  min-height: 1.3em;
   font-family: var(--mono);
-  font-size: clamp(0.98rem, 1.25vw, 1.14rem);
+  font-size: clamp(0.65rem, 1.1vw, 1.05rem);
   color: var(--white);
   text-align: center;
-  line-height: 1.45;
+  line-height: 1.4;
 }
 
 .pi-status .pi-count {
@@ -330,15 +337,15 @@ body {
 }
 
 .pi-digits {
-  margin-top: 0.42rem;
-  min-height: 1.35em;
+  margin-top: clamp(0.15rem, 0.35vh, 0.42rem);
+  min-height: 1.3em;
   font-family: var(--mono);
-  font-size: clamp(1.04rem, 1.32vw, 1.2rem);
+  font-size: clamp(0.7rem, 1.2vw, 1.15rem);
   letter-spacing: 0.01em;
   color: var(--white);
   word-break: break-word;
   text-align: left;
-  line-height: 1.5;
+  line-height: 1.45;
 }
 
 .pi-digit-flash-correct {
@@ -352,7 +359,7 @@ body {
 }
 
 .pi-entry-row {
-  margin-top: 0.45rem;
+  margin-top: clamp(0.15rem, 0.35vh, 0.45rem);
   display: flex;
   align-items: center;
   gap: 0.5rem;
@@ -366,19 +373,18 @@ body {
   color: var(--yellow);
   font-family: var(--bebas);
   letter-spacing: 0.08em;
-  font-size: 1.12rem;
-  padding: 0.3rem 0.8rem;
+  font-size: 1.05rem;
+  padding: 0.28rem 0.75rem;
   cursor: pointer;
 }
 
-
 .pi-fact {
-  margin-top: 0.6rem;
-  min-height: 1.45em;
+  margin-top: clamp(0.15rem, 0.45vh, 0.6rem);
+  min-height: 1.3em;
   font-family: var(--mono);
-  font-size: clamp(0.9rem, 1.08vw, 1rem);
+  font-size: clamp(0.62rem, 1vw, 0.95rem);
   color: rgba(255, 255, 255, 0.86);
-  line-height: 1.45;
+  line-height: 1.4;
   text-align: center;
 }
 
@@ -391,15 +397,15 @@ body {
   list-style: none;
   display: flex;
   flex-direction: column;
-  gap: 1.4rem;
+  gap: clamp(0.3rem, 0.85vh, 1.2rem);
   width: 100%;
 }
 
 .exp-list li {
   font-family: var(--mono);
-  font-size: clamp(0.94rem, 1.3vw, 1.12rem);
+  font-size: clamp(0.68rem, 1.1vw, 1.05rem);
   color: var(--black);
-  line-height: 1.65;
+  line-height: 1.6;
 }
 
 .exp-list li .company {
@@ -410,16 +416,8 @@ body {
   font-style: italic;
 }
 
-/* ── Narrow screens: single column, DOM order (hero → about → … → quote) ── */
-@media (max-width: 900px) {
-  body {
-    padding: var(--gap);
-  }
-
-  .portfolio {
-    min-height: calc(100vh - 2 * var(--gap));
-  }
-
+/* ── Mobile: single column stack (≤700px) ── */
+@media (max-width: 700px) {
   .grid {
     flex: 0 1 auto;
     min-height: unset;
@@ -437,48 +435,26 @@ body {
     grid-row: unset;
     min-height: unset;
     width: 100%;
-  }
-
-  .hero {
-    min-height: auto;
-    padding: 2rem 1.5rem;
-  }
-
-  .cell {
-    padding: 1.5rem 1.25rem;
+    overflow: visible;
   }
 
   .projects,
   .experience {
     justify-content: flex-start;
-    padding-top: 2rem;
-    padding-bottom: 2rem;
   }
 
   .projects {
     display: block;
-    overflow: visible;
   }
 
   .projects-main {
     display: block;
-    flex: 0 0 auto;
+    overflow: visible;
     padding-bottom: 0;
   }
 
-  .projects-main .cell-header {
-    margin-bottom: 1.1rem;
-  }
-
-  .project-list {
-    max-width: 100%;
-    margin: 0;
-  }
-
   .fun-panel {
-    width: calc(100% + 2.5rem);
-    margin: 1.35rem -1.25rem -1.5rem;
-    padding: 1.1rem 1.25rem 1.2rem;
+    margin-top: 1rem;
   }
 
   .social-col {
@@ -489,23 +465,27 @@ body {
 
   .social-link {
     flex: 0 0 auto;
-    width: 100%;
-    min-height: 72px;
-  }
-
-  .pi-status {
-    font-size: clamp(0.82rem, 3.3vw, 0.95rem);
-  }
-
-  .pi-digits {
-    font-size: clamp(0.9rem, 3.9vw, 1.03rem);
-  }
-
-  .hero .tagline {
-    font-size: clamp(0.9rem, 3.6vw, 1.1rem);
+    min-height: 58px;
   }
 
   .hero h1 {
-    font-size: clamp(3rem, 13vw, 4.75rem);
+    font-size: clamp(2.5rem, 11vw, 4rem);
+  }
+
+  .hero .tagline {
+    font-size: clamp(0.8rem, 3.5vw, 1rem);
+  }
+
+  .cell-header {
+    font-size: clamp(1.5rem, 7vw, 2.4rem);
+  }
+
+  .body-text {
+    font-size: clamp(0.82rem, 3.2vw, 1rem);
+  }
+
+  .project-list li,
+  .exp-list li {
+    font-size: clamp(0.82rem, 3.2vw, 1rem);
   }
 }
